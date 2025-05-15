@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=[device-width], initial-scale=1.0">
+    <title>Página Esporte - Jornal Tchênal</title>
+</head>
+<head>
+    <style>
+        body {
+            position: relative;
+        }
+        h1 {
+            color: #000000;
+            font-size: 3em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        h2{
+            color:#000000;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        .contador {
+            font-size: 1.5em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button {
+            position: absolute; 
+            top: 20px; 
+            left: 20px; 
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none; 
+            color: #333;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 0.9em;
+        }
+        .back-button:hover {
+            background-color: #e0e0e0; 
+        }
+    </style>
+</head>
+<body>
+    <a href="jornal.html" class="back-button">Voltar à Página Inicial</a>
+    <h1> Jornal Tchênal</h1>
+    <h1> Esporte </h1>
+    
+    <div class="contador">
+        <h3>Faltam para o Próximo GreNal:</h3>
+        <p id="contadorGreNal"></p>
+    </div>
+
+    <script>
+        function atualizarContadorGreNal() {
+            const dataGreNal = new Date("September 20, 2025 00:00:00").getTime();
+            const agora = new Date().getTime();
+            const diferenca = dataGreNal - agora;
+
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            if (diferenca > 0) {
+                document.getElementById("contadorGreNal").innerHTML = 
+                    "Faltam " + dias + " dias, " + horas + " horas, " + minutos + " minutos e " + segundos + " segundos para o próximo GreNal!";
+            } else {
+                document.getElementById("contadorGreNal").innerHTML = "O GreNal já aconteceu!";
+            }
+        }
+        setInterval(atualizarContadorGreNal, 1000);
+        atualizarContadorGreNal();
+    </script>
+</body>
+</html>
