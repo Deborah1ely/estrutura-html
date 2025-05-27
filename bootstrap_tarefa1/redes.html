@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1 {
+            color: #375e97;
+            font-size: 2em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-bottom: 1px solid #375e97;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #375e97;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2, h3 {
+            color: #375e97;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .social-link img {
+            width: 40px; /* Adjusted size for better responsiveness */
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .social-link a {
+            font-size: 1.2em;
+            color: #375e97;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f8f8f8;
+            margin-top: 40px;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #f1f1f1;
+        }
+
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3,
+        .dark-mode nav ul li a,
+        .dark-mode .social-link a {
+            color: #9ecfff;
+        }
+
+        .dark-mode footer {
+            background-color: #111;
+        }
+
+        #toggle-dark {
+            display: block;
+            margin: 10px auto;
+            background-color: transparent;
+            border: 2px solid #375e97;
+            padding: 6px 12px;
+            color: #375e97;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .dark-mode #toggle-dark {
+            border-color: #9ecfff;
+            color: #9ecfff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .social-link {
+                flex-direction: column; /* Stack image and link on small screens */
+                align-items: flex-start;
+            }
+
+            .social-link img {
+                margin-right: 0;
+                margin-bottom: 5px; /* Add space between image and link */
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    <header>
+        <h1>Currículo - Deborah Ely --> Redes Sociais</h1>
+        <button id="toggle-dark">🌙 Alternar Dark Mode</button>
+        <nav>
+            <ul>
+                <li><a href="curriculo_responsivo.html">Início</a></li>
+                <li><a href="formacao.html">Formação Acadêmica</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>🌐 Minhas redes sociais:</h2>
+        <h3>🔗 Links:</h3>
+        <div class="social-link">
+            <img src="linkedin.png" alt="Linkedin"/>
+            <a href="https://www.linkedin.com/in/deborah-ely/" target="_blank">Linkedin</a>
+        </div>
+        <div class="social-link">
+            <img src="instagram.png" alt="Instagram"/>
+            <a href="https://instagram.com/debydebyelyy" target="_blank">Instagram</a>
+        </div>
+        <div class="social-link">
+            <img src="facebook.png" alt="Facebook"/>
+            <a href="https://www.facebook.com/deborah.ely" target="_blank">Facebook</a>
+        </div>
+        <div class="social-link">
+            <img src="github.png" alt="Github"/>
+            <a href="https://github.com/Deborah1ely" target="_blank">Github</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Deborah Ely - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById("toggle-dark").onclick = () => {
+            document.body.classList.toggle("dark-mode");
+        };
+    </script>
+</body>
+</html>
